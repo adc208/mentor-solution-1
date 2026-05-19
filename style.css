@@ -1,0 +1,185 @@
+/* Base page styles */
+:root {
+  color-scheme: light;
+  font-family: 'Red Hat Display', system-ui, sans-serif;
+  font-weight: 500;
+  background-color: hsl(225, 100%, 94%);
+  color: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    padding: 4rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: hsl(245, 75%, 52%);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: hsl(245, 85%, 62%);
+}
+
+.container {
+  width: min(100%, 35rem);
+  background: hsl(0, 0%, 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 30px 50px rgba(46, 56, 88, 0.12);
+  overflow: hidden;
+}
+
+.card__hero {
+  width: 100%;
+  display: block;
+}
+
+.card__body {
+  padding: 2rem;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  text-align: center;
+  color: hsl(223, 47%, 23%);
+}
+
+.card__text {
+  margin: 1rem auto 2rem;
+  max-width: 28rem;
+  font-size: 0.99rem;
+  line-height: 1.8;
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: hsl(225, 100%, 98%);
+  margin-bottom: 1.75rem;
+}
+
+.plan__row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.plan__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: hsl(225, 100%, 94%);
+}
+
+.plan__details {
+  flex: 1;
+}
+
+.plan__name {
+  margin: 0;
+  font-weight: 700;
+  color: hsl(223, 47%, 23%);
+}
+
+.plan__cost {
+  margin: 0.25rem 0 0;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan__action {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: hsl(245, 75%, 52%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 15px 25px rgba(67, 75, 200, 0.2);
+}
+
+.button:hover,
+.button:focus-visible {
+  background: hsl(245, 85%, 60%);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(52, 84, 255, 0.25);
+  outline-offset: 4px;
+}
+
+.cancel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+}
+
+.cancel:hover,
+.cancel:focus-visible {
+  color: hsl(223, 47%, 23%);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+}
+
+.attribution a {
+  color: hsl(245, 75%, 52%);
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  color: hsl(245, 85%, 60%);
+}
